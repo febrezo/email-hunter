@@ -1,0 +1,44 @@
+[project]
+name = "email_hunter"
+version = "0.1.0"
+authors = [
+  { name = "Félix Brezo", email = "contacto@felixbrezo.com" },
+]
+description = "Another package to analyse emails to find potential threats."
+readme = "README.md"
+
+requires-python = ">=3.7"
+dependencies = [
+  "colorama == 0.4.6",
+  "outlook_msg == 1.0.0",
+  "extract_msg == 0.38.4",
+  "PrettyTable == 3.6.0",
+  "python-dateutil == 2.8.2"
+]
+
+license = { text = "GNU GPLv3+" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Topic :: Security",
+    "Topic :: Communications :: Email"
+]
+keywords = [
+    "threat-hunting", 
+    "dfir", 
+    "forensics",
+    "email", 
+    "cve-2023-23397",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/febrezo/email-hunter"
+"Bug Tracker" = "https://github.com/febrezo/email-hunter/issues"
+
+[project.scripts]
+email-hunter = "email_hunter.cli:main"
+
+[tool.setuptools]
+packages = ["email_hunter"]
